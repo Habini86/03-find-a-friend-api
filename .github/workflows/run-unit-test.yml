@@ -17,6 +17,3 @@ jobs:
     - run: npm ci
 
     - run: npm run test
-      env: 
-        NODE_END: dev
-        NUMBER_PASS_HASH: 6

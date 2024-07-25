@@ -4,7 +4,7 @@ import {
   Size,
   Age,
   ActivityLevel,
-  IndepedencyLevel,
+  IndependencyLevel,
   Ambient,
 } from '@prisma/client'
 
@@ -12,7 +12,7 @@ export interface findManyQuery {
   size?: Size
   age?: Age
   activity_Level?: ActivityLevel
-  indepedency_Level?: IndepedencyLevel
+  independency_Level?: IndependencyLevel
   ambient?: Ambient
 }
 

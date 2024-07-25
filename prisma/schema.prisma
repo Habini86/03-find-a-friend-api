@@ -21,7 +21,7 @@ enum ActivityLevel {
   VERY_HIGH
 }
 
-enum IndepedencyLevel {
+enum IndependencyLevel {
   VERY_LOW
   LOW
   MEDIUM
@@ -49,7 +49,7 @@ model Organization {
   city          String
   state         String
   phone         String
-  email         String
+  email         String   @unique
   password_Hash String
   created_At    DateTime @default(now())
 
@@ -59,17 +59,17 @@ model Organization {
 }
 
 model Animal {
-  id                String           @id @default(cuid())
-  name              String
-  description       String
-  requirements      String[]
-  photos            Bytes[]
-  size              Size
-  age               Age
-  activity_Level    ActivityLevel
-  indepedency_Level IndepedencyLevel
-  ambient           Ambient
-  created_At        DateTime         @default(now())
+  id                 String            @id @default(cuid())
+  name               String
+  description        String
+  requirements       String[]
+  photos             Bytes[]
+  size               Size
+  age                Age
+  activity_Level     ActivityLevel
+  independency_Level IndependencyLevel
+  ambient            Ambient
+  created_At         DateTime          @default(now())
 
   organization    Organization @relation(fields: [organization_Id], references: [id])
   organization_Id String

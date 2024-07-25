@@ -15,7 +15,7 @@ export class InMemoryAnimalsRepository implements AnimalsRepository {
       size: data.size,
       age: data.age,
       activity_Level: data.activity_Level,
-      indepedency_Level: data.indepedency_Level,
+      independency_Level: data.independency_Level,
       ambient: data.ambient,
       created_At: new Date(),
       organization_Id: data.organization_Id,
@@ -70,9 +70,9 @@ export class InMemoryAnimalsRepository implements AnimalsRepository {
             if (!matchesQuery) return false
           }
 
-          if (query.indepedency_Level) {
-            matchesQuery = animal.indepedency_Level.includes(
-              query.indepedency_Level.toString(),
+          if (query.independency_Level) {
+            matchesQuery = animal.independency_Level.includes(
+              query.independency_Level.toString(),
             )
 
             if (!matchesQuery) return false

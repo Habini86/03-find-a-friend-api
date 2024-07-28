@@ -3,7 +3,7 @@ import {
   Size,
   Age,
   ActivityLevel,
-  IndepedencyLevel,
+  IndependencyLevel,
   Ambient,
 } from '@prisma/client'
 import { AnimalsRepository } from '@/repository/animals-repository'
@@ -18,7 +18,7 @@ interface CreateAnimalUseCaseRequest {
   size: Size
   age: Age
   activity_Level: ActivityLevel
-  indepedency_Level: IndepedencyLevel
+  independency_Level: IndependencyLevel
   ambient: Ambient
   organization_Id: string
 }
@@ -43,7 +43,7 @@ export class CreateAnimalUseCase {
     size,
     age,
     activity_Level,
-    indepedency_Level,
+    independency_Level,
     ambient,
     organization_Id,
   }: CreateAnimalUseCaseRequest): Promise<CreateAnimalUseCaseResponse> {
@@ -62,7 +62,7 @@ export class CreateAnimalUseCase {
       size,
       age,
       activity_Level,
-      indepedency_Level,
+      independency_Level,
       ambient,
       organization_Id,
     })

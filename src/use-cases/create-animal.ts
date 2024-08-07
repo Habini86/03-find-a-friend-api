@@ -14,7 +14,6 @@ interface CreateAnimalUseCaseRequest {
   name: string
   description: string
   requirements: string[]
-  photos: Buffer[]
   size: Size
   age: Age
   activity_Level: ActivityLevel
@@ -39,7 +38,6 @@ export class CreateAnimalUseCase {
     name,
     description,
     requirements,
-    photos,
     size,
     age,
     activity_Level,
@@ -58,7 +56,6 @@ export class CreateAnimalUseCase {
       name,
       description,
       requirements,
-      photos,
       size,
       age,
       activity_Level,

@@ -11,7 +11,6 @@ export class InMemoryAnimalsRepository implements AnimalsRepository {
       name: data.name,
       description: data.description,
       requirements: data.requirements as string[],
-      photos: data.photos as Buffer[],
       size: data.size,
       age: data.age,
       activity_Level: data.activity_Level,

@@ -63,7 +63,6 @@ model Animal {
   name               String
   description        String
   requirements       String[]
-  photos             Bytes[]
   size               Size
   age                Age
   activity_Level     ActivityLevel

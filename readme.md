@@ -20,7 +20,7 @@
   - Os filtros da consulta será: Idade, Nível de Energia, Porte do Animal e Nível de independência.
 - [x] O retorno dos dados do pet será com um objeto onde terá o ID do pet, Nome. Idade, Porte, Nível de Energia, Nível de Independência, Ambiente, Requisitos para Adoção e um array com as imagens. Terá também os dados da ONG: Nome do Responsável, Localização, Endereço e Numéro de Contato.
 - [x] Para cadastro da ONG terá os seguintes dados requisitados: Nome do Responsável, E-mail, CEP, Endereço, Senha e Numéro de Contato.
-- [ ] Para login da ONG necessecitará de: E-mail e Senha. Será gerado um Token JWT.
+- [x] Para login da ONG necessecitará de: E-mail e Senha. Será gerado um Token JWT.
 
 ### Regras de negócio
 
@@ -28,4 +28,4 @@
 - [x] Um pet deve estar ligado a uma ORG
 - [x] O usuário que quer adotar, entrará em contato com a ORG via WhatsApp
 - [x] Todos os filtros são opcionais
-- [ ] Para uma ORG acessar a aplicação como admin, ela precisa estar logada
+- [x] Para uma ORG acessar a aplicação como admin, ela precisa estar logada

@@ -12,17 +12,13 @@ describe('Register (e2e)', () => {
   })
 
   it('should be able to register a new organization', async () => {
-    const password = '123456'
-
     const response = await request(app.server).post('/organizations').send({
       name: 'JavaScript',
-      address: 'any_address',
-      cep: 'any_cep',
-      city: 'any_city',
-      state: 'any_state',
+      address: 'Avenida Cristiano Machado',
+      cep: '31155555',
       phone: 'any_phone',
       email: 'any_email@email.com',
-      password,
+      password: '123456',
     })
 
     expect(response.statusCode).toBe(201)

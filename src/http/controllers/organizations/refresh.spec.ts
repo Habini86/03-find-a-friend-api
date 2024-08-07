@@ -17,10 +17,8 @@ describe('Refresh Token (e2e)', () => {
 
     await request(app.server).post('/organizations').send({
       name: 'JavaScript',
-      address: 'any_address',
-      cep: 'any_cep',
-      city: 'any_city',
-      state: 'any_state',
+      address: 'Avenida Cristiano Machado',
+      cep: '31155555',
       phone: 'any_phone',
       email,
       password,

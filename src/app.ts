@@ -5,7 +5,12 @@ import fastifyCookie from '@fastify/cookie'
 import { ZodError } from 'zod'
 import { organizationsRoutes } from './http/controllers/organizations/routes'
 
+import fastifyMultipart from 'fastify-multipart'
+import { animalsRoutes } from './http/controllers/animals/routes'
+
 export const app = fastify()
+
+app.register(fastifyMultipart)
 
 app.register(fastifyJwt, {
   secret: env.JWT_SECRET,
@@ -21,6 +26,8 @@ app.register(fastifyJwt, {
 app.register(fastifyCookie)
 
 app.register(organizationsRoutes)
+
+app.register(animalsRoutes)
 
 app.setErrorHandler((error, _, reply) => {
   if (env.NODE_ENV !== 'production') {

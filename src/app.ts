@@ -5,12 +5,9 @@ import fastifyCookie from '@fastify/cookie'
 import { ZodError } from 'zod'
 import { organizationsRoutes } from './http/controllers/organizations/routes'
 
-import fastifyMultipart from 'fastify-multipart'
 import { animalsRoutes } from './http/controllers/animals/routes'
 
 export const app = fastify()
-
-app.register(fastifyMultipart)
 
 app.register(fastifyJwt, {
   secret: env.JWT_SECRET,

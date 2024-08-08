@@ -15,8 +15,6 @@ describe('Create (e2e)', () => {
   it('should be able to register a new animal', async () => {
     const { token } = await createAndAuthenticateOrganization(app)
 
-    console.log(token)
-
     const response = await request(app.server)
       .post('/animals/create')
       .set('Authorization', `Bearer ${token}`)
@@ -31,6 +29,6 @@ describe('Create (e2e)', () => {
         age: 'ADULT',
       })
 
-    expect(response.statusCode).toBe(201)
+    expect(response.statusCode).toEqual(201)
   })
 })

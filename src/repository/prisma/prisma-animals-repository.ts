@@ -29,15 +29,15 @@ export class PrismaAnimalsRepository implements AnimalsRepository {
     const animals = await prisma.animal.findMany({
       where: {
         AND: [
-          query?.size ? { Size: query.size } : {},
-          query?.age ? { Age: query.age } : {},
-          query?.activity_Level ? { ActivityLevel: query.activity_Level } : {},
+          query?.size ? { size: query.size } : {},
+          query?.age ? { age: query.age } : {},
+          query?.activity_Level ? { activity_Level: query.activity_Level } : {},
           query?.independency_Level
-            ? { IndepedencyLevel: query.independency_Level }
+            ? { independency_Level: query.independency_Level }
             : {},
-          query?.ambient ? { Ambient: query.ambient } : {},
+          query?.ambient ? { ambient: query.ambient } : {},
           organization_Id ? { organization_Id: { in: organization_Id } } : {},
-        ].filter(Boolean),
+        ],
       },
       skip: (page - 1) * 20,
       take: 20,
